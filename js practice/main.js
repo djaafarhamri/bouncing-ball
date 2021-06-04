@@ -31,15 +31,19 @@ Ball.prototype.draw = function() {
 Ball.prototype.update = function () {
   if ((this.x + this.size) >= width){
     this.velX = -(this.velX)
+    this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')'
   }
   if ((this.x - this.size) <= 0){
     this.velX = -(this.velX)
+    this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')'
   }
   if ((this.y + this.size) >= height){
     this.velY = -(this.velY)
+    this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')'
   }
   if ((this.y - this.size) <= 0){
     this.velY = -(this.velY)
+    this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')'
   }
   this.x += this.velX
   this.y += this.velY
